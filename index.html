@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Bundle Builder - Buy 3 and Save 30% on premium products" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap" 
+    rel="stylesheet" 
+  />
+  
+  <link rel="stylesheet" href="./style.css" />
+  
+  <title>Bundle Builder </title>
+</head>
+
+<body>
+  
+  <main class="container" role="main">
+    
+    <!-- Page Header -->
+    <header class="header-container">
+      <h1 class="main-heading">Buy 3 and Save 30%</h1>
+    </header>
+
+    <!-- Product Bundle Section -->
+    <section class="product-bundle" aria-label="Product bundle selection">
+      
+      <!-- Products Grid -->
+      <div class="grid-custom" role="region" aria-label="Available products">
+        
+        <!-- First Row of Products -->
+        <div class="product-row">
+          
+          <!-- Product 1: Premium Headphones -->
+          <article class="product-card" data-product-id="1" data-price="150">
+            <div class="product-image-container">
+              <div class="skeleton-image" aria-hidden="true"></div>
+              <img
+                class="product-image skeleton"
+                src="assets/product-1.jpg"
+                alt=" Tie-Dye Lounge Set"
+                loading="lazy"
+              />
+            </div>
+            
+            <div class="product-info">
+              <div class="product-link">
+                <div class="skeleton-title" aria-hidden="true"></div>
+                <h3 class="product-title" style="display: none">Tie-Dye Lounge Set</h3>
+              </div>
+              
+              <div class="product-form-bundle">
+                <div class="price-container">
+                  <div class="skeleton-price" aria-hidden="true"></div>
+                  <span class="product-price" style="display: none">$150.00</span>
+                </div>
+                
+                <div class="skeleton-button" aria-hidden="true"></div>
+                <button
+                  class="add-to-bundle-btn"
+                  onclick="toggleProduct(1)"
+                  aria-label="Add Tie-Dye Lounge Set to bundle"
+                  style="display: none"
+                >
+                  <span class="btn-text">Add to Bundle</span>
+                  <svg
+                    class="btn-icon plus-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8 1V15M1 8H15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <svg
+                    class="btn-icon check-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    style="display: none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M13.5 4.5L6 12L2.5 8.5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+            <div class="product-card" data-product-id="2" data-price="150">
+              <div class="product-image-container">
+                <div class="skeleton-image"></div>
+                <img
+                  class="product-image skeleton"
+                  src="assets/product-2.jpg"
+                  alt="Sunburst Tracksuit"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-link">
+                  <div class="skeleton-title"></div>
+                  <h3 class="product-title" style="display: none">
+                    Sunburst Tracksuit
+                  </h3>
+                </div>
+                <div class="product-form-bundle">
+                  <div class="price-container">
+                    <div class="skeleton-price"></div>
+                    <span class="product-price" style="display: none"
+                      >$150.00</span
+                    >
+                  </div>
+                  <div class="skeleton-button"></div>
+                  <button
+                    class="add-to-bundle-btn"
+                    onclick="toggleProduct(2)"
+                    aria-label="Add Sunburst Tracksuit to bundle"
+                    style="display: none"
+                  >
+                    <span class="btn-text">Add to Bundle</span>
+                    <svg
+                      class="btn-icon plus-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8 1V15M1 8H15"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <svg
+                      class="btn-icon check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      style="display: none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M13.5 4.5L6 12L2.5 8.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card" data-product-id="3" data-price="150">
+              <div class="product-image-container">
+                <div class="skeleton-image"></div>
+                <img
+                  class="product-image skeleton"
+                  src="assets/product-3.jpg"
+                  alt="Retro Red Streetwear"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-link">
+                  <div class="skeleton-title"></div>
+                  <h3 class="product-title" style="display: none">
+                    Retro Red Streetwear
+                  </h3>
+                </div>
+                <div class="product-form-bundle">
+                  <div class="price-container">
+                    <div class="skeleton-price"></div>
+                    <span class="product-price" style="display: none"
+                      >$150.00</span
+                    >
+                  </div>
+                  <div class="skeleton-button"></div>
+                  <button
+                    class="add-to-bundle-btn"
+                    onclick="toggleProduct(3)"
+                    aria-label="Add Retro Red Streetwear to bundle"
+                    style="display: none"
+                  >
+                    <span class="btn-text">Add to Bundle</span>
+                    <svg
+                      class="btn-icon plus-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8 1V15M1 8H15"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <svg
+                      class="btn-icon check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      style="display: none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M13.5 4.5L6 12L2.5 8.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row of Products -->
+          <div class="product-row">
+            <!-- Product Card 4 -->
+            <div class="product-card" data-product-id="4" data-price="150">
+              <div class="product-image-container">
+                <div class="skeleton-image"></div>
+                <img
+                  class="product-image skeleton"
+                  src="assets/product-4.jpg"
+                  alt="Urban Sportwear Combo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-link">
+                  <div class="skeleton-title"></div>
+                  <h3 class="product-title" style="display: none">
+                    Urban Sportwear Combo
+                  </h3>
+                </div>
+                <div class="product-form-bundle">
+                  <div class="price-container">
+                    <div class="skeleton-price"></div>
+                    <span class="product-price" style="display: none"
+                      >$150.00</span
+                    >
+                  </div>
+                  <div class="skeleton-button"></div>
+                  <button
+                    class="add-to-bundle-btn"
+                    onclick="toggleProduct(4)"
+                    aria-label="Add Urban Sportwear Combo to bundle"
+                    style="display: none"
+                  >
+                    <span class="btn-text">Add to Bundle</span>
+                    <svg
+                      class="btn-icon plus-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8 1V15M1 8H15"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <svg
+                      class="btn-icon check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      style="display: none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M13.5 4.5L6 12L2.5 8.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card" data-product-id="5" data-price="150">
+              <div class="product-image-container">
+                <div class="skeleton-image"></div>
+                <img
+                  class="product-image skeleton"
+                  src="assets/product-5.jpg"
+                  alt="Oversized Knit & Coat"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-link">
+                  <div class="skeleton-title"></div>
+                  <h3 class="product-title" style="display: none">
+                   Oversized Knit & Coat
+                  </h3>
+                </div>
+                <div class="product-form-bundle">
+                  <div class="price-container">
+                    <div class="skeleton-price"></div>
+                    <span class="product-price" style="display: none"
+                      >$150.00</span
+                    >
+                  </div>
+                  <div class="skeleton-button"></div>
+                  <button
+                    class="add-to-bundle-btn"
+                    onclick="toggleProduct(5)"
+                    aria-label="Add Oversized Knit & Coat to bundle"
+                    style="display: none"
+                  >
+                    <span class="btn-text">Add to Bundle</span>
+                    <svg
+                      class="btn-icon plus-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8 1V15M1 8H15"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <svg
+                      class="btn-icon check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      style="display: none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M13.5 4.5L6 12L2.5 8.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card" data-product-id="6" data-price="150">
+              <div class="product-image-container">
+                <div class="skeleton-image"></div>
+                <img
+                  class="product-image skeleton"
+                  src="assets/product-6.jpg"
+                  alt="Chic Monochrome Blazer"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <div class="product-link">
+                  <div class="skeleton-title"></div>
+                  <h3 class="product-title" style="display: none">
+                    Chic Monochrome Blazer
+                  </h3>
+                </div>
+                <div class="product-form-bundle">
+                  <div class="price-container">
+                    <div class="skeleton-price"></div>
+                    <span class="product-price" style="display: none"
+                      >$150.00</span
+                    >
+                  </div>
+                  <div class="skeleton-button"></div>
+                  <button
+                    class="add-to-bundle-btn"
+                    onclick="toggleProduct(6)"
+                    aria-label="Add Chic Monochrome Blazer to bundle"
+                    style="display: none"
+                  >
+                    <span class="btn-text">Add to Bundle</span>
+                    <svg
+                      class="btn-icon plus-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8 1V15M1 8H15"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <svg
+                      class="btn-icon check-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      style="display: none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M13.5 4.5L6 12L2.5 8.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle Sidebar -->
+        <div class="bundle-sidebar">
+          <div class="sticky-element">
+            <!-- Bundle Header -->
+            <div class="bundle-header">
+              <div class="bundle-title-container">
+                <h2 class="bundle-title">Create a Bundle</h2>
+              </div>
+              <div class="bundle-description">
+                <p>Add at least 3 products and Save 30%.</p>
+              </div>
+              <div class="progress-bundle-bar">
+                <div class="progress-background" id="progressBar"></div>
+              </div>
+            </div>
+
+            <!-- Selected Products List -->
+            <div class="selected-products" id="selectedProducts">
+              <!-- Selected products will be dynamically added here -->
+            </div>
+
+            <!-- Skeleton Loaders for Empty Bundle -->
+            <div class="bundle-skeleton-container" id="bundleSkeletonContainer">
+              <div class="bundle-skeleton-row">
+                <div class="bundle-skeleton-small"></div>
+                <div class="bundle-skeleton-large"></div>
+              </div>
+              <div class="bundle-skeleton-row">
+                <div class="bundle-skeleton-small"></div>
+                <div class="bundle-skeleton-large"></div>
+              </div>
+              <div class="bundle-skeleton-row">
+                <div class="bundle-skeleton-small"></div>
+                <div class="bundle-skeleton-large"></div>
+              </div>
+            </div>
+
+            <!-- Bundle Summary -->
+            <div class="bundle-summary">
+              <div class="discount-row">
+                <div class="discount-border">
+                  <div class="discount-container">
+                    <span class="discount-label">Discount</span>
+                    <span class="discount-amount" id="discountAmount"
+                      >- $0.00 (0%)</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="subtotal-row">
+                <div class="subtotal-border">
+                  <div class="subtotal-container">
+                    <span class="subtotal-label">Subtotal</span>
+                    <span class="subtotal-amount" id="subtotalAmount"
+                      >$0.00</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Bundle to Cart Button -->
+            <button
+              class="add-bundle-to-cart-btn"
+              id="addBundleBtn"
+              disabled
+              onclick="addBundleToCart()"
+            >
+              <span class="btn-text">Add Bundle to Cart</span>
+              <svg
+                class="btn-icon caret-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 4L10 8L6 12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
