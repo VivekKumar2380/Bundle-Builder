@@ -28,7 +28,6 @@ project-root/
 ├── Readme.md          # Project documentation
 └── assets/            # Image assets
     ├── product-*.jpg   # Product images
-    ├── photo-*.jpg     # Hero image
     └── Icons/          # SVG icons
         ├── CaretRight.svg
         ├── Check.svg
